@@ -4,8 +4,8 @@ android {
     compileSdkVersion 29
     defaultConfig {
         applicationId "com.example.diceroller"
-        minSdkVersion 15
-        targetSdkVersion 28
+        minSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -22,7 +22,11 @@ android {
     }
     buildToolsVersion = '28.0.3'
 }
-
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io/#pschroen/slack-api-android' }
+    }
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -32,4 +36,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'androidx.mediarouter:mediarouter:1.1.0'
+    implementation 'com.github.pschroen:slack-api-android:c66cc8d997'
 }
