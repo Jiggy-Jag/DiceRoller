@@ -14,6 +14,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -90,19 +92,26 @@ public class MainActivity extends AppCompatActivity {
         int Roll = Roll_the_dice();
 
         TextView tv = this.findViewById(R.id.textView2);
+        List<String> Questions = new ArrayList <> ();
+        Questions.add("If you could go anywhere in the world, where would you go?");//1
+        Questions.add("If you were stranded on a desert island, what three things would you want to take with you?"); //2
+        Questions.add("If you could eat only one food for the rest of your life, what would that be?"); //3
+        Questions.add("If you won a million dollars, what is the first thing you would buy?");//4
+        Questions.add("If you could spaned the day with one fictional character, who would it be?");//5
+        Questions.add("If you found a magic lantern and a genie gave you three wishes, what would you wish?");//6
 
         if (Roll == 1)
-            tv.setText("If you could go anywhere in the world, where would you go?");
+            tv.setText(Questions.get(0));
         if (Roll == 2)
-                tv.setText("If you were stranded on a desert island, what three things would you want to take with you?");
+                tv.setText(Questions.get(1));
         if (Roll == 3)
-                tv.setText("If you could eat only one food for the rest of your life, what would that be?");
+                tv.setText(Questions.get(2));
         if (Roll == 4)
-                tv.setText("If you won a million dollars, what is the first thing you would buy?");
+                tv.setText(Questions.get(3));
         if (Roll == 5)
-                tv.setText("If you could spaned the day with one fictional character, who would it be?");
+                tv.setText(Questions.get(4));
         if (Roll == 6)
-                tv.setText("If you found a magic lantern and a genie gave you three wishes, what would you wish?");
+                tv.setText(Questions.get(5));
 
 
 
